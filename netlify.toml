@@ -1,0 +1,17 @@
+# Single self-contained file — no build step.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# OG image can cache hard; regenerate + rename if it ever changes.
+[[headers]]
+  for = "/og.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

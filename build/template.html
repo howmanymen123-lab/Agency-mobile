@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sparks Car Body Repair — Edgware | Dents, Scratches &amp; Resprays</title>
+<meta name="description" content="Independent body shop in Edgware. Accident repair, dents, scratches, bumpers &amp; resprays. Twenty years at the bench, all work guaranteed. WhatsApp a photo of the damage for a quote.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sparks Car Body Repair — Edgware">
+<meta property="og:description" content="The damage was never there. Accident repair, dents, scratches &amp; resprays — twenty years at the bench, all work guaranteed.">
+<meta property="og:url" content="https://sparksbodyrepair.netlify.app/">
+<meta property="og:image" content="https://sparksbodyrepair.netlify.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D0F12'/%3E%3Cpath d='M18 38 L34 18 L30 30 L46 26 L26 48 L31 34 Z' fill='%23FF5A1F'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Sparks Car Body Repair",
+  "url": "https://sparksbodyrepair.netlify.app/",
+  "image": "https://sparksbodyrepair.netlify.app/og.jpg",
+  "telephone": "+447700900123",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "29 Park Way, Burnt Oak",
+    "addressLocality": "Edgware",
+    "postalCode": "HA8 5EY",
+    "addressCountry": "GB"
+  }
+}
+</script>
+<style>
+/* ============================================================
+   SPARKS CAR BODY REPAIR — "THE FINISH"
+   Single-file build. Design system: 03_DESIGN_SYSTEM.md (locked)
+   ============================================================ */
+
+/*@@FONTFACES@@*/
+
+:root {
+  --ink:        #0D0F12;
+  --graphite:   #16191E;
+  --steel:      #8A919C;
+  --white:      #F4F5F7;
+  --spark:      #FF5A1F;
+  --spark-deep: #D9430F;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --pad-section: clamp(96px, 14vh, 160px);
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+/* noise over the ink background — kills banding (2.5% opacity) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("@@NOISE@@");
+  background-repeat: repeat;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  text-wrap: balance;
+}
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.5vw, 3.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+p { margin: 0; max-width: 62ch; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--spark);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+::selection { background: var(--spark); color: var(--ink); }
+
+.micro {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: fixed; top: 10px; left: 10px; z-index: 300;
+  padding: 10px 18px;
+  background: var(--spark); color: var(--ink);
+  font-weight: 600; text-decoration: none; border-radius: 8px;
+  transform: translateY(-250%);
+  transition: transform 0.2s;
+}
+.skip-link:focus { transform: none; }
+
+/* 12-col grid shell */
+.wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 720px) { .wrap { padding-inline: 24px; } }
+
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+}
+
+section { position: relative; z-index: 2; }
+main { position: relative; z-index: 2; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-spark {
+  background: var(--spark);
+  color: #1A0C04;
+}
+.btn-spark:hover { background: var(--spark-deep); transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent;
+  border-color: var(--steel);
+  color: var(--white);
+}
+.btn-ghost:hover { border-color: var(--white); transform: translateY(-2px); }
+.btn svg { flex-shrink: 0; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+}
+.nav.is-solid {
+  background: var(--ink);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 76px;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+}
+.brand svg { display: block; }
+.brand-sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  color: var(--steel);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nav-links {
+  display: none;
+  list-style: none;
+  margin: 0; padding: 0;
+  align-items: center;
+  gap: 6px;
+}
+.nav-links a:not(.btn) {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+}
+.nav-links a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 14px; right: 100%; bottom: 6px;
+  height: 1.5px;
+  background: var(--spark);
+  transition: right 0.25s var(--ease-out);
+}
+.nav-links a:not(.btn):hover::after { right: 14px; }
+.nav-links .btn { min-height: 42px; padding: 10px 20px; margin-left: 10px; font-size: 0.95rem; }
+@media (min-width: 900px) {
+  .nav-links { display: flex; }
+}
+/* mobile: wordmark + single WhatsApp button (sticky bar handles the rest) */
+.nav-wa-mobile { display: inline-flex; }
+@media (min-width: 900px) { .nav-wa-mobile { display: none; } }
+
+/* ---------- S1 HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: clip;
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+/* photo layer — activated by .has-photo on <html> when the real
+   respray shot is embedded by the build script */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-img, none);
+  background-size: cover;
+  background-position: 68% 50%; /* focal point: red rear quarter + sprayer, right of centre */
+  display: none;
+}
+.has-photo .hero-photo { display: block; }
+.has-photo .hero-art { display: none; }
+
+/* art treatment — "fresh paint under booth lights", used until the
+   real workshop photography is supplied */
+.hero-art { position: absolute; inset: 0; background: linear-gradient(180deg, #12151a 0%, var(--ink) 70%); }
+.hero-art .wash {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 46% 42% at 71% 42%, rgba(146, 22, 16, 0.5), transparent 70%),
+    radial-gradient(ellipse 30% 24% at 64% 34%, rgba(214, 60, 28, 0.16), transparent 70%),
+    radial-gradient(ellipse 60% 18% at 70% 88%, rgba(146, 22, 16, 0.14), transparent 75%);
+}
+.hero-art svg {
+  position: absolute;
+  right: -6%;
+  bottom: 6%;
+  width: min(78%, 900px);
+  height: auto;
+  opacity: 0.5;
+}
+/* bottom-up gradient so text always sits on ink (per design system) */
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, var(--ink) 8%, rgba(13, 15, 18, 0.9) 26%, rgba(13, 15, 18, 0.3) 62%, rgba(13, 15, 18, 0.45) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: clamp(28px, 5vh, 56px);
+}
+.hero-copy { grid-column: 1 / -1; }
+@media (min-width: 900px) { .hero-copy { grid-column: 1 / 8; } }
+
+.hero-copy .micro { margin-bottom: 20px; }
+.hero-sub {
+  margin-top: 24px;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.55;
+  color: var(--white);
+  max-width: 46ch;
+}
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+@media (max-width: 479px) {
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-top: clamp(28px, 5vh, 48px);
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: var(--steel);
+  letter-spacing: 0.02em;
+}
+.trust .stars { color: var(--spark); letter-spacing: 0.12em; font-size: 0.85rem; }
+.trust .dot { color: rgba(138, 145, 156, 0.5); }
+
+/* ---------- Section shell ---------- */
+.section { padding-block: var(--pad-section); }
+@media (max-width: 719px) { .section { padding-block: 72px; } }
+.section-head { margin-bottom: clamp(40px, 6vw, 72px); }
+.section-head .micro { margin-bottom: 16px; }
+.section-head .lede {
+  margin-top: 18px;
+  color: var(--steel);
+  font-size: 1.0625rem;
+}
+section[id] { scroll-margin-top: 84px; }
+
+/* ---------- S2 SERVICES ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 720px) { .services-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+@media (min-width: 1080px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.card {
+  background: var(--graphite);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s var(--ease-out);
+}
+.card .icon {
+  width: 28px; height: 28px;
+  color: var(--steel);
+  margin-bottom: 22px;
+  transition: color 0.3s;
+}
+.card h3 {
+  font-weight: 500;
+  font-size: 1.1875rem;
+  letter-spacing: -0.01em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.card h3::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%; bottom: 0;
+  height: 2px;
+  background: var(--spark);
+  transition: right 0.3s var(--ease-out);
+}
+.card p {
+  margin-top: 12px;
+  color: var(--steel);
+  font-size: 0.98rem;
+}
+@media (hover: hover) {
+  .card:hover { transform: translateY(-4px); }
+  .card:hover .icon { color: var(--spark); }
+  .card:hover h3::after { right: 0; }
+}
+
+/* ---------- S3 OUR WORK ---------- */
+.work-grid { align-items: center; row-gap: 40px; }
+.work-copy { grid-column: 1 / -1; }
+.work-media { grid-column: 1 / -1; }
+@media (min-width: 900px) {
+  .work-copy { grid-column: 1 / 6; }
+  .work-media { grid-column: 6 / 13; }
+}
+.work-copy .lede { margin-top: 18px; color: var(--steel); }
+.work-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.work-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--graphite);
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.work-frame .work-photo {
+  position: absolute; inset: 0;
+  background-image: var(--hero-img, none);
+  background-size: cover;
+  background-position: 68% 50%;
+  display: none;
+}
+.has-photo .work-frame .work-photo { display: block; }
+.has-photo .work-frame .work-art { display: none; }
+.work-frame .work-art {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 55% at 62% 45%, rgba(146, 22, 16, 0.45), transparent 72%),
+    linear-gradient(165deg, #191d23 0%, var(--graphite) 60%);
+}
+.work-frame .work-art svg {
+  position: absolute;
+  right: -4%; bottom: 4%;
+  width: 92%;
+  opacity: 0.55;
+}
+.work-frame figcaption,
+.work-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 40px 24px 18px;
+  background: linear-gradient(0deg, rgba(13, 15, 18, 0.92), transparent);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+/* ---------- S4 WHY SPARKS ---------- */
+.why-band {
+  border-block: 1px solid rgba(255, 255, 255, 0.06);
+  padding-block: clamp(56px, 8vh, 88px);
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 720px) { .why-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+.why-item h3 {
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  letter-spacing: -0.01em;
+}
+.why-item h3 .mark { color: var(--spark); }
+.why-item p {
+  margin-top: 12px;
+  color: var(--steel);
+  font-size: 0.98rem;
+  max-width: 34ch;
+}
+
+/* ---------- S5 REVIEWS ---------- */
+.reviews-inner { max-width: 760px; }
+.carousel { position: relative; }
+.quotes {
+  display: grid;
+}
+.quote {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+.quote.is-active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+/* no-JS: first quote stays visible */
+html.no-js .quote:first-child { opacity: 1; transform: none; }
+
+.quote .stars {
+  color: var(--spark);
+  letter-spacing: 0.18em;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 22px;
+}
+.quote blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.quote figcaption {
+  margin-top: 22px;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 36px;
+}
+.carousel-dots button {
+  width: 28px; height: 28px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.carousel-dots button span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition: background 0.25s, transform 0.25s;
+}
+.carousel-dots button[aria-selected="true"] span {
+  background: var(--spark);
+  transform: scale(1.2);
+}
+
+/* ---------- S6 CONTACT ---------- */
+.contact-grid { row-gap: 40px; }
+.contact-info { grid-column: 1 / -1; }
+.contact-map { grid-column: 1 / -1; }
+@media (min-width: 900px) {
+  .contact-info { grid-column: 1 / 6; }
+  .contact-map { grid-column: 6 / 13; }
+}
+.addr {
+  font-style: normal;
+  margin-top: 26px;
+  display: grid;
+  gap: 22px;
+}
+.addr .label { margin-bottom: 6px; }
+.addr .value {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.addr a.value {
+  text-decoration: none;
+  position: relative;
+}
+.addr a.value:hover { color: var(--spark); }
+.contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.map-panel {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--graphite);
+  min-height: 340px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.map-panel .streets {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+}
+.map-panel .pin {
+  position: absolute;
+  top: 34%;
+  left: 56%;
+  width: 44px;
+  height: 54px;
+}
+.map-panel .pin::after {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: -8px;
+  width: 26px; height: 8px;
+  translate: -50%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  filter: blur(3px);
+}
+.map-card {
+  position: relative;
+  margin: 20px;
+  padding: 20px 22px;
+  border-radius: 12px;
+  background: rgba(13, 15, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  width: calc(100% - 40px);
+}
+.map-card .place {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+.map-card .place small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--steel);
+  margin-top: 2px;
+  letter-spacing: 0.04em;
+}
+.map-card .btn { margin-left: auto; }
+
+/* ---------- Footer ---------- */
+footer {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 48px 0 120px;
+}
+@media (min-width: 900px) { footer { padding-bottom: 48px; } }
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  margin: 0; padding: 0;
+}
+.footer-nav a {
+  font-size: 0.9rem;
+  color: var(--steel);
+  text-decoration: none;
+}
+.footer-nav a:hover { color: var(--white); }
+.footer-legal {
+  width: 100%;
+  margin-top: 26px;
+  font-size: 0.78rem;
+  color: var(--steel);
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Mobile sticky action bar ---------- */
+.action-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 110;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 8px;
+  padding: 10px max(12px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-right));
+  background: rgba(13, 15, 18, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translateY(105%);
+  transition: transform 0.35s var(--ease-out);
+}
+.action-bar.is-visible { transform: none; }
+.action-bar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--steel);
+  color: var(--white);
+}
+.action-bar a.wa {
+  background: var(--spark);
+  border-color: var(--spark);
+  color: #1A0C04;
+}
+@media (min-width: 900px) { .action-bar { display: none; } }
+
+/* ---------- Motion safety ----------
+   Content is visible by default. The .js-anim class (added by JS
+   only when animation will actually run) lets GSAP set initial
+   states; if JS fails, nothing is ever hidden. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Sparks Car Body Repair — top of page">
+      <svg width="132" height="26" viewBox="0 0 132 26" role="img" aria-label="SPARKS">
+        <text x="0" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">SP</text>
+        <g id="a-notch">
+          <text x="31" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F5F7">A</text>
+          <polygon points="34,14.6 42,14.6 39.4,17.4 36,17.4" fill="#0D0F12"/>
+          <polygon points="35,14.9 40.6,14.9 38.6,17 36.4,17" fill="#FF5A1F"/>
+        </g>
+        <text x="48" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">RKS</text>
+      </svg>
+      <span class="brand-sub">Car Body Repair — Edgware</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-spark" href="https://wa.me/447700900123?text=Hi%20Sparks%2C%20here%27s%20a%20photo%20of%20the%20damage%20on%20my%20car" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.4-.3z"/></svg>
+        WhatsApp
+      </a></li>
+    </ul>
+    <a class="btn btn-spark nav-wa-mobile" href="https://wa.me/447700900123?text=Hi%20Sparks%2C%20here%27s%20a%20photo%20of%20the%20damage%20on%20my%20car" rel="noopener" style="min-height:42px;padding:10px 18px;font-size:0.9rem;">
+      <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.4-.3z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============ S1 — HERO ============ -->
+<section class="hero" id="top" aria-label="Sparks Car Body Repair">
+  <div class="hero-media" aria-hidden="true">
+    <div class="hero-photo"></div>
+    <div class="hero-art">
+      <div class="wash"></div>
+      <!-- technical line-art: rear quarter panel (stands in for the
+           respray photograph until originals are supplied) -->
+      <svg viewBox="0 0 900 420" fill="none" preserveAspectRatio="xMaxYMax meet">
+        <g stroke="#F4F5F7" stroke-width="1.5" stroke-linecap="round">
+          <path d="M40 330 C 120 322, 180 318, 250 316 C 310 314, 330 312, 360 300 C 420 276, 470 220, 560 208 C 640 198, 740 202, 820 216" opacity="0.5"/>
+          <path d="M560 208 C 600 150, 700 140, 760 168 C 800 187, 818 205, 822 216" opacity="0.45"/>
+          <path d="M250 316 C 252 268, 290 236, 338 236 C 386 236, 424 268, 426 316" opacity="0.6"/>
+          <circle cx="338" cy="318" r="58" opacity="0.5"/>
+          <circle cx="338" cy="318" r="34" opacity="0.35"/>
+          <path d="M426 316 L 620 316 C 700 316, 780 308, 830 296" opacity="0.5"/>
+          <path d="M360 300 C 430 288, 520 282, 610 282" opacity="0.3"/>
+          <path d="M620 316 C 622 284, 646 262, 678 262 C 710 262, 734 284, 736 316" opacity="0.45"/>
+          <circle cx="678" cy="318" r="40" opacity="0.4"/>
+          <path d="M760 168 L 764 200" opacity="0.3"/>
+          <g opacity="0.35">
+            <path d="M492 118 L 516 142 M516 118 L 492 142"/>
+            <path d="M120 210 L 140 230 M140 210 L 120 230"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-shade"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="wrap grid12">
+      <div class="hero-copy">
+        <span class="micro" data-hero="micro">Car body repair — Edgware &amp; Burnt Oak</span>
+        <h1 id="hero-h1">The damage was never there.</h1>
+        <p class="hero-sub" data-hero="sub">Accident repair, dents, scratches &amp; resprays in Edgware. Twenty years at the bench. All work guaranteed.</p>
+        <div class="hero-ctas" data-hero="ctas">
+          <a class="btn btn-spark" href="https://wa.me/447700900123?text=Hi%20Sparks%2C%20here%27s%20a%20photo%20of%20the%20damage%20on%20my%20car" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.4-.3z"/></svg>
+            WhatsApp a photo of the damage
+          </a>
+          <a class="btn btn-ghost" href="tel:+447700900123">Call the shop</a>
+        </div>
+        <div class="trust" data-hero="trust">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>Google reviews</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>MOT approved</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>All work guaranteed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S2 — SERVICES ============ -->
+<section class="section" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="micro">Services</span>
+      <h2 id="services-h">What we fix</h2>
+    </div>
+    <div class="services-grid">
+      <article class="card" data-reveal-card>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h20M6 18v-4.5L9 8h10l3 5.5V18M6 22h2.5M19.5 22H22"/><circle cx="9" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M12 11l-1.5 2.5h3L12 16"/></svg>
+        <h3>Accident &amp; insurance repair</h3>
+        <p>Knocks, prangs and insurance jobs — handled start to finish.</p>
+      </article>
+      <article class="card" data-reveal-card>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c4-2 8-3 12-3"/><circle cx="19" cy="11" r="5"/><path d="M19 8.5v2.5l1.8 1.8M9 24l2-2.5M14 24.5l1.5-3"/></svg>
+        <h3>Dent removal</h3>
+        <p>Car park dings to proper dents, pulled and perfected.</p>
+      </article>
+      <article class="card" data-reveal-card>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22c6-1 14-1 20 0"/><path d="M6 16l6-8M10 17l6-8M14 18l6-8" opacity="0.9"/></svg>
+        <h3>Scratch &amp; scuff repair</h3>
+        <p>Key lines, pillar scrapes, trolley rash — gone.</p>
+      </article>
+      <article class="card" data-reveal-card>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16c0-3 2-5 5-5h12c3 0 5 2 5 5v3H3v-3z"/><path d="M3 19h5m12 0h5M11 11l2 3 2-3"/></svg>
+        <h3>Bumper repair</h3>
+        <p>Cracked, split or hanging off. Rebuilt, not just patched.</p>
+      </article>
+      <article class="card" data-reveal-card>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10h8l3-3h3v6l-3 1-2 9H9l-2-9V10z"/><path d="M7 12H4M21 4v3"/><circle cx="24" cy="12" r="0.5"/><circle cx="25" cy="9" r="0.5"/><circle cx="26" cy="14" r="0.5"/></svg>
+        <h3>Resprays</h3>
+        <p>Single panels to full colour changes, booth-finished.</p>
+      </article>
+      <article class="card" data-reveal-card>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="14" r="9"/><path d="M14 5v4M9 21l2-3M19 21l-2-3"/><path d="M10.5 13.5c2-1.5 5-1.5 7 0" opacity="0.8"/></svg>
+        <h3>Machine polishing &amp; paint correction</h3>
+        <p>Swirls and dull paint brought back to depth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S3 — OUR WORK ============ -->
+<section class="section" id="work" aria-labelledby="work-h">
+  <div class="wrap grid12 work-grid">
+    <div class="work-copy" data-reveal>
+      <span class="micro">Our work</span>
+      <h2 id="work-h" style="margin-top:16px;">Straight out of the booth.</h2>
+      <p class="lede">Panels pulled, primed, colour-matched and finished until the repair disappears. The proof is in the paint.</p>
+      <div class="work-cta">
+        <a class="btn btn-ghost" href="https://wa.me/447700900123?text=Hi%20Sparks%2C%20here%27s%20a%20photo%20of%20the%20damage%20on%20my%20car" rel="noopener">
+          Got damage like this? WhatsApp a photo
+        </a>
+      </div>
+    </div>
+    <figure class="work-media" style="margin:0;" data-reveal>
+      <div class="work-frame">
+        <div class="work-photo" role="img" aria-label="Rear quarter panel respray in the Sparks spray booth"></div>
+        <div class="work-art" aria-hidden="true">
+          <svg viewBox="0 0 900 420" fill="none" preserveAspectRatio="xMaxYMax meet">
+            <g stroke="#F4F5F7" stroke-width="1.5" stroke-linecap="round">
+              <path d="M40 330 C 120 322, 180 318, 250 316 C 310 314, 330 312, 360 300 C 420 276, 470 220, 560 208 C 640 198, 740 202, 820 216" opacity="0.5"/>
+              <path d="M560 208 C 600 150, 700 140, 760 168 C 800 187, 818 205, 822 216" opacity="0.45"/>
+              <path d="M250 316 C 252 268, 290 236, 338 236 C 386 236, 424 268, 426 316" opacity="0.6"/>
+              <circle cx="338" cy="318" r="58" opacity="0.5"/>
+              <circle cx="338" cy="318" r="34" opacity="0.35"/>
+              <path d="M426 316 L 620 316 C 700 316, 780 308, 830 296" opacity="0.5"/>
+              <path d="M620 316 C 622 284, 646 262, 678 262 C 710 262, 734 284, 736 316" opacity="0.45"/>
+              <circle cx="678" cy="318" r="40" opacity="0.4"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption>Rear quarter respray — booth finish</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ S4 — WHY SPARKS ============ -->
+<section class="why-band" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <h2 id="why-h" class="sr-only">Why Sparks</h2>
+    <div class="why-grid">
+      <div class="why-item" data-reveal-why>
+        <h3><span class="mark">20</span> years at the bench</h3>
+        <p>Two decades of panel, prep and paint. Same hands, same standard, every job.</p>
+      </div>
+      <div class="why-item" data-reveal-why>
+        <h3>All work <span class="mark">guaranteed</span></h3>
+        <p>If it isn't right, it doesn't leave the shop. Every repair is backed by our guarantee.</p>
+      </div>
+      <div class="why-item" data-reveal-why>
+        <h3><span class="mark">MOT</span> approved</h3>
+        <p>A proper MOT-approved workshop — not a man with a van.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S5 — REVIEWS ============ -->
+<section class="section" id="reviews" aria-labelledby="reviews-h">
+  <div class="wrap reviews-inner">
+    <div class="section-head" data-reveal>
+      <span class="micro">Reviews</span>
+      <h2 id="reviews-h">What customers say</h2>
+    </div>
+    <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Customer reviews">
+      <div class="quotes">
+        <figure class="quote is-active" role="group" aria-roledescription="slide" aria-label="Review 1 of 3">
+          <span class="stars" aria-label="Five stars">★★★★★</span>
+          <blockquote>“Had the rear quarter resprayed after a scrape. You genuinely cannot tell — the colour match is perfect.”</blockquote>
+          <figcaption>Daniel K.</figcaption>
+        </figure>
+        <figure class="quote" role="group" aria-roledescription="slide" aria-label="Review 2 of 3">
+          <span class="stars" aria-label="Five stars">★★★★★</span>
+          <blockquote>“Dent in the door from a car park. Sorted quickly, looks factory, and the price was exactly what they quoted.”</blockquote>
+          <figcaption>Sarah M.</figcaption>
+        </figure>
+        <figure class="quote" role="group" aria-roledescription="slide" aria-label="Review 3 of 3">
+          <span class="stars" aria-label="Five stars">★★★★★</span>
+          <blockquote>“Bumper was cracked right through. They rebuilt it properly instead of pushing me to buy new. Quality work.”</blockquote>
+          <figcaption>Amir H.</figcaption>
+        </figure>
+      </div>
+      <div class="carousel-dots" role="tablist" aria-label="Choose review">
+        <button type="button" role="tab" aria-selected="true" aria-label="Show review 1"><span></span></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show review 2"><span></span></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Show review 3"><span></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 — CONTACT ============ -->
+<section class="section" id="contact" aria-labelledby="contact-h">
+  <div class="wrap grid12 contact-grid">
+    <div class="contact-info" data-reveal>
+      <span class="micro">Contact</span>
+      <h2 id="contact-h" style="margin-top:16px;">Find the shop</h2>
+      <address class="addr">
+        <div>
+          <span class="micro label">Address</span>
+          <span class="value">29 Park Way, Burnt Oak,<br>Edgware HA8 5EY</span>
+        </div>
+        <div>
+          <span class="micro label">Phone</span>
+          <a class="value" href="tel:+447700900123">07700 900123</a>
+        </div>
+      </address>
+      <div class="contact-ctas">
+        <a class="btn btn-spark" href="https://wa.me/447700900123?text=Hi%20Sparks%2C%20here%27s%20a%20photo%20of%20the%20damage%20on%20my%20car" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.4-.3z"/></svg>
+          WhatsApp a photo of the damage
+        </a>
+        <a class="btn btn-ghost" href="tel:+447700900123">Call the shop</a>
+      </div>
+    </div>
+    <div class="contact-map" data-reveal>
+      <div class="map-panel">
+        <!-- stylised location panel (decorative street grid, not a map
+             projection) — links out to live Google Maps directions -->
+        <svg class="streets" viewBox="0 0 600 400" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <g stroke="#2A2F37" stroke-width="2">
+            <path d="M-20 90 L 620 60"/><path d="M-20 190 L 620 170"/>
+            <path d="M-20 300 L 620 290"/><path d="M80 -20 L 120 420"/>
+            <path d="M250 -20 L 270 420"/><path d="M430 -20 L 420 420"/>
+          </g>
+          <g stroke="#232830" stroke-width="1.5">
+            <path d="M-20 140 L 620 115"/><path d="M-20 245 L 620 235"/>
+            <path d="M165 -20 L 195 420"/><path d="M340 -20 L 345 420"/>
+            <path d="M520 -20 L 510 420"/>
+          </g>
+          <path d="M-20 350 C 150 330, 450 345, 620 330" stroke="#FF5A1F" stroke-width="2" opacity="0.25"/>
+        </svg>
+        <svg class="pin" viewBox="0 0 44 54" fill="none" aria-hidden="true">
+          <path d="M22 2 C 11 2, 3 10, 3 21 C 3 34, 22 52, 22 52 C 22 52, 41 34, 41 21 C 41 10, 33 2, 22 2 Z" fill="#FF5A1F"/>
+          <circle cx="22" cy="21" r="7" fill="#0D0F12"/>
+        </svg>
+        <div class="map-card">
+          <span class="place">Sparks Car Body Repair
+            <small>29 Park Way · Burnt Oak · HA8 5EY</small>
+          </span>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=29%20Park%20Way%2C%20Burnt%20Oak%2C%20Edgware%20HA8%205EY" rel="noopener" target="_blank">
+            Get directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top" aria-label="Sparks Car Body Repair — top of page">
+      <svg width="110" height="22" viewBox="0 0 132 26" role="img" aria-label="SPARKS">
+        <text x="0" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">SP</text>
+        <g>
+          <text x="31" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F5F7">A</text>
+          <polygon points="34,14.6 42,14.6 39.4,17.4 36,17.4" fill="#0D0F12"/>
+          <polygon points="35,14.9 40.6,14.9 38.6,17 36.4,17" fill="#FF5A1F"/>
+        </g>
+        <text x="48" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">RKS</text>
+      </svg>
+    </a>
+    <ul class="footer-nav">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-legal">© <span id="year">2026</span> Sparks Car Body Repair · 29 Park Way, Burnt Oak, Edgware HA8 5EY</p>
+  </div>
+</footer>
+
+<!-- mobile sticky action bar: Call · WhatsApp · Directions -->
+<div class="action-bar" data-action-bar aria-hidden="true">
+  <a href="tel:+447700900123" tabindex="-1">Call</a>
+  <a class="wa" href="https://wa.me/447700900123?text=Hi%20Sparks%2C%20here%27s%20a%20photo%20of%20the%20damage%20on%20my%20car" rel="noopener" tabindex="-1">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.2-.2-.4-.3z"/></svg>
+    WhatsApp
+  </a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=29%20Park%20Way%2C%20Burnt%20Oak%2C%20Edgware%20HA8%205EY" rel="noopener" target="_blank" tabindex="-1">Directions</a>
+</div>
+
+<script>/*@@VENDOR@@*/</script>
+<script>
+/* ============================================================
+   Motion init — safety architecture per 04_MOTION_SYSTEM.md:
+   content visible by default; reduced-motion checked BEFORE init;
+   whole init wrapped in try/catch; Lenis in its own try/catch.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  document.documentElement.classList.remove("no-js");
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+
+  /* ---------- always-on, animation-independent behaviour ---------- */
+
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  // nav solid state after 80px
+  var nav = document.getElementById("nav");
+  function navState() {
+    if (window.scrollY > 80) nav.classList.add("is-solid");
+    else nav.classList.remove("is-solid");
+  }
+  navState();
+  window.addEventListener("scroll", navState, { passive: true });
+
+  // mobile sticky action bar after hero scroll-out
+  var bar = document.querySelector("[data-action-bar]");
+  var hero = document.querySelector(".hero");
+  if (bar && hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      var out = !entries[0].isIntersecting;
+      bar.classList.toggle("is-visible", out);
+      bar.setAttribute("aria-hidden", String(!out));
+      var links = bar.querySelectorAll("a");
+      for (var i = 0; i < links.length; i++) {
+        if (out) links[i].removeAttribute("tabindex");
+        else links[i].setAttribute("tabindex", "-1");
+      }
+    }, { threshold: 0 }).observe(hero);
+  }
+
+  // reviews carousel — plain JS + CSS transitions, no GSAP dependency
+  var carousel = document.querySelector("[data-carousel]");
+  if (carousel) {
+    var quotes = carousel.querySelectorAll(".quote");
+    var dots = carousel.querySelectorAll(".carousel-dots button");
+    var current = 0;
+    var timer = null;
+
+    var show = function (i) {
+      quotes[current].classList.remove("is-active");
+      dots[current].setAttribute("aria-selected", "false");
+      current = i;
+      quotes[current].classList.add("is-active");
+      dots[current].setAttribute("aria-selected", "true");
+    };
+    var next = function () { show((current + 1) % quotes.length); };
+    var play = function () {
+      if (!timer && !reduceMotion) timer = setInterval(next, 6000);
+    };
+    var pause = function () {
+      if (timer) { clearInterval(timer); timer = null; }
+    };
+
+    for (var d = 0; d < dots.length; d++) {
+      (function (idx) {
+        dots[idx].addEventListener("click", function () { pause(); show(idx); });
+      })(d);
+    }
+    carousel.addEventListener("mouseenter", pause);
+    carousel.addEventListener("mouseleave", play);
+    carousel.addEventListener("touchstart", pause, { passive: true });
+    carousel.addEventListener("focusin", pause);
+    carousel.addEventListener("focusout", play);
+    play();
+  }
+
+  /* ---------- animation layer (GSAP + Lenis) ---------- */
+
+  if (reduceMotion) return; // instant states everywhere — done
+
+  try {
+    if (typeof gsap === "undefined") return;
+    gsap.registerPlugin(ScrollTrigger);
+    document.documentElement.classList.add("js-anim");
+
+    // Lenis smooth scroll — its own try/catch; native scroll on failure
+    var lenis = null;
+    try {
+      if (typeof Lenis !== "undefined") {
+        lenis = new Lenis({ duration: 1.05, smoothWheel: true });
+        gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+        gsap.ticker.lagSmoothing(0);
+        lenis.on("scroll", ScrollTrigger.update);
+        // anchor links route through Lenis
+        var anchors = document.querySelectorAll('a[href^="#"]');
+        for (var a = 0; a < anchors.length; a++) {
+          anchors[a].addEventListener("click", function (e) {
+            var id = this.getAttribute("href");
+            if (id.length > 1 && document.querySelector(id)) {
+              e.preventDefault();
+              lenis.scrollTo(id, { offset: id === "#top" ? -100 : -70 });
+            }
+          });
+        }
+      }
+    } catch (lenisErr) {
+      lenis = null;
+    }
+
+    // --- hero entrance: H1 word-by-word, <=900ms total ---
+    var h1 = document.getElementById("hero-h1");
+    var words = h1.textContent.split(" ");
+    h1.textContent = "";
+    h1.setAttribute("aria-label", words.join(" "));
+    for (var w = 0; w < words.length; w++) {
+      var outer = document.createElement("span");
+      outer.style.cssText = "display:inline-block;overflow:hidden;vertical-align:top;";
+      var inner = document.createElement("span");
+      inner.style.display = "inline-block";
+      inner.className = "h1-word";
+      inner.textContent = words[w] + (w < words.length - 1 ? " " : "");
+      inner.setAttribute("aria-hidden", "true");
+      outer.appendChild(inner);
+      h1.appendChild(outer);
+    }
+
+    var heroMedia = document.querySelector(".hero-photo");
+    var entrance = gsap.timeline({
+      defaults: { ease: "power3.out" },
+      onComplete: function () {
+        gsap.set(".h1-word", { willChange: "auto" });
+        if (heroMedia) gsap.set(heroMedia, { willChange: "auto" });
+      }
+    });
+    entrance
+      .from(".h1-word", { y: 24, opacity: 0, duration: 0.55, stagger: 0.06, willChange: "transform" })
+      .from('[data-hero="micro"]', { y: 14, opacity: 0, duration: 0.45 }, 0.05)
+      .from('[data-hero="sub"], [data-hero="ctas"]', { y: 20, opacity: 0, duration: 0.5, stagger: 0.08 }, 0.15)
+      .from('[data-hero="trust"]', { opacity: 0, duration: 0.5 }, 0.55);
+
+    // Ken Burns — photo layer only, one-time, GPU-composited
+    if (document.documentElement.classList.contains("has-photo") && !saveData) {
+      gsap.fromTo(".hero-photo",
+        { scale: 1 },
+        { scale: 1.08, duration: 12, ease: "none", willChange: "transform" });
+    }
+
+    // hero content parallax on scroll-out (halved on small screens)
+    var parallax = window.innerWidth < 720 ? 7 : 15;
+    gsap.to(".hero-content", {
+      yPercent: -parallax,
+      ease: "none",
+      scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+    });
+
+    // --- section reveals: one grammar — fade-up 20px / 0.6s / power2.out, once ---
+    var revealFrom = { y: 20, opacity: 0, duration: 0.6, ease: "power2.out" };
+
+    gsap.utils.toArray("[data-reveal]").forEach(function (el) {
+      gsap.from(el, Object.assign({}, revealFrom, {
+        scrollTrigger: { trigger: el, start: "top 80%", once: true }
+      }));
+    });
+
+    var cards = gsap.utils.toArray("[data-reveal-card]");
+    if (cards.length) {
+      gsap.from(cards, Object.assign({}, revealFrom, {
+        stagger: 0.08,
+        scrollTrigger: { trigger: cards[0], start: "top 80%", once: true }
+      }));
+    }
+
+    var whys = gsap.utils.toArray("[data-reveal-why]");
+    if (whys.length) {
+      gsap.from(whys, Object.assign({}, revealFrom, {
+        stagger: 0.1,
+        scrollTrigger: { trigger: whys[0], start: "top 80%", once: true }
+      }));
+    }
+  } catch (err) {
+    // animation must never break the site
+    document.documentElement.classList.add("anim-off");
+    if (window.console && console.error) console.error("anim init failed:", err);
+  }
+})();
+</script>
+</body>
+</html>
