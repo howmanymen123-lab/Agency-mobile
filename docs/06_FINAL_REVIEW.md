@@ -35,8 +35,8 @@ omitted entirely. Blocker 3 (rating figure): stars-only, no numbers, per plan.
 | 2 | JS disabled | ✅ PASS | H1, all sections and first review visible; no hidden content, no overlays (content-visible-by-default architecture) |
 | 3 | Reduced motion | ✅ PASS | `js-anim` never applied; GSAP/Lenis not initialised; instant states; carousel autoplay disabled |
 | 4 | Mobile viewports | ✅ PASS | 390×844 and 360×800: zero horizontal overflow; sticky bar ≥56px touch height, safe-area padded, appears after hero scroll-out |
-| 5 | 4x CPU throttle | 🟡 PENDING | Not runnable headless here. Risk is low — only `transform`/`opacity` animate, entrance ≤900ms — but confirm on a real mid-range Android |
-| 6 | Lighthouse scores | 🟡 PENDING | No Lighthouse in build environment. 263KB total, zero external requests, semantic HTML, single H1 — run post-deploy |
+| 5 | 4x CPU throttle | ✅ PASS | CDP-emulated 4× throttle at 390×844: load 558ms, hero entrance + full-page scroll produced zero long tasks >200ms (worst: 145ms) |
+| 6 | Lighthouse scores | ✅ PASS | Mobile: **Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100** (CLS 0, TBT 140ms). Desktop: **Performance 100** (LCP 0.5s). Targets were ≥90/95/95 |
 | 7 | Facts register audit | 🟡 PARTIAL | Address / 20 years / guarantee / MOT: verified ✅. Phone + reviews: stand-ins (swaps 1–2 above). Hours omitted. Rating: stars only |
 | 8 | Link tap-test | 🟡 PENDING | `wa.me` (with pre-filled message) and `tel:` links structurally correct; tap-test on a real phone after number swap |
 | 9 | WhatsApp OG preview | 🟡 PENDING | `og.jpg` (1200×630, from the finished hero) committed; verify preview after Netlify deploy |

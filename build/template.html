@@ -375,6 +375,7 @@ section[id] { scroll-margin-top: 84px; }
   transition: transform 0.3s var(--ease-out);
 }
 .card .icon {
+  display: block;
   width: 28px; height: 28px;
   color: var(--steel);
   margin-bottom: 22px;
@@ -444,14 +445,14 @@ section[id] { scroll-margin-top: 84px; }
 .work-frame .work-art {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 55% at 62% 45%, rgba(146, 22, 16, 0.45), transparent 72%),
+    /* panel gloss highlight */
+    linear-gradient(112deg, transparent 42%, rgba(244, 245, 247, 0.045) 46%, rgba(244, 245, 247, 0.02) 50%, transparent 55%),
+    /* fresh red paint under booth light */
+    radial-gradient(ellipse 62% 48% at 60% 38%, rgba(158, 24, 16, 0.6), rgba(146, 22, 16, 0.22) 55%, transparent 75%),
+    radial-gradient(ellipse 30% 20% at 52% 30%, rgba(224, 74, 40, 0.18), transparent 70%),
+    /* wet floor reflection */
+    linear-gradient(0deg, rgba(158, 24, 16, 0.16) 0%, transparent 26%),
     linear-gradient(165deg, #191d23 0%, var(--graphite) 60%);
-}
-.work-frame .work-art svg {
-  position: absolute;
-  right: -4%; bottom: 4%;
-  width: 92%;
-  opacity: 0.55;
 }
 .work-frame figcaption,
 .work-caption {
@@ -750,11 +751,11 @@ footer {
       <svg width="132" height="26" viewBox="0 0 132 26" role="img" aria-label="SPARKS">
         <text x="0" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">SP</text>
         <g id="a-notch">
-          <text x="31" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F5F7">A</text>
-          <polygon points="34,14.6 42,14.6 39.4,17.4 36,17.4" fill="#0D0F12"/>
-          <polygon points="35,14.9 40.6,14.9 38.6,17 36.4,17" fill="#FF5A1F"/>
+          <text x="29.5" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F5F7">A</text>
+          <polygon points="32.5,14.6 40.5,14.6 37.9,17.4 34.5,17.4" fill="#0D0F12"/>
+          <polygon points="33.5,14.9 39.1,14.9 37.1,17 34.9,17" fill="#FF5A1F"/>
         </g>
-        <text x="48" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">RKS</text>
+        <text x="46.5" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">RKS</text>
       </svg>
       <span class="brand-sub">Car Body Repair — Edgware</span>
     </a>
@@ -847,7 +848,7 @@ footer {
         <p>Knocks, prangs and insurance jobs — handled start to finish.</p>
       </article>
       <article class="card" data-reveal-card>
-        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c4-2 8-3 12-3"/><circle cx="19" cy="11" r="5"/><path d="M19 8.5v2.5l1.8 1.8M9 24l2-2.5M14 24.5l1.5-3"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3.5 0 5.5-3 8-3 2 0 2.6 1.6 3 3M14 21c3.5 0 5-3 11-3"/><path d="M14 13V5M10.5 8.5L14 5l3.5 3.5"/></svg>
         <h3>Dent removal</h3>
         <p>Car park dings to proper dents, pulled and perfected.</p>
       </article>
@@ -862,12 +863,12 @@ footer {
         <p>Cracked, split or hanging off. Rebuilt, not just patched.</p>
       </article>
       <article class="card" data-reveal-card>
-        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10h8l3-3h3v6l-3 1-2 9H9l-2-9V10z"/><path d="M7 12H4M21 4v3"/><circle cx="24" cy="12" r="0.5"/><circle cx="25" cy="9" r="0.5"/><circle cx="26" cy="14" r="0.5"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h9v5a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-5zM8 10V7h4v3M12 7h5l2 3"/><path d="M8.5 18v4h3v-4"/><path d="M22 8h.01M24.5 11h.01M23 14h.01M25.5 6.5h.01" stroke-width="2"/></svg>
         <h3>Resprays</h3>
         <p>Single panels to full colour changes, booth-finished.</p>
       </article>
       <article class="card" data-reveal-card>
-        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="14" r="9"/><path d="M14 5v4M9 21l2-3M19 21l-2-3"/><path d="M10.5 13.5c2-1.5 5-1.5 7 0" opacity="0.8"/></svg>
+        <svg class="icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="15" r="9"/><circle cx="13" cy="15" r="4"/><path d="M23 4l.7 2.3L26 7l-2.3.7L23 10l-.7-2.3L20 7l2.3-.7z" stroke-width="1.2"/></svg>
         <h3>Machine polishing &amp; paint correction</h3>
         <p>Swirls and dull paint brought back to depth.</p>
       </article>
@@ -891,20 +892,7 @@ footer {
     <figure class="work-media" style="margin:0;" data-reveal>
       <div class="work-frame">
         <div class="work-photo" role="img" aria-label="Rear quarter panel respray in the Sparks spray booth"></div>
-        <div class="work-art" aria-hidden="true">
-          <svg viewBox="0 0 900 420" fill="none" preserveAspectRatio="xMaxYMax meet">
-            <g stroke="#F4F5F7" stroke-width="1.5" stroke-linecap="round">
-              <path d="M40 330 C 120 322, 180 318, 250 316 C 310 314, 330 312, 360 300 C 420 276, 470 220, 560 208 C 640 198, 740 202, 820 216" opacity="0.5"/>
-              <path d="M560 208 C 600 150, 700 140, 760 168 C 800 187, 818 205, 822 216" opacity="0.45"/>
-              <path d="M250 316 C 252 268, 290 236, 338 236 C 386 236, 424 268, 426 316" opacity="0.6"/>
-              <circle cx="338" cy="318" r="58" opacity="0.5"/>
-              <circle cx="338" cy="318" r="34" opacity="0.35"/>
-              <path d="M426 316 L 620 316 C 700 316, 780 308, 830 296" opacity="0.5"/>
-              <path d="M620 316 C 622 284, 646 262, 678 262 C 710 262, 734 284, 736 316" opacity="0.45"/>
-              <circle cx="678" cy="318" r="40" opacity="0.4"/>
-            </g>
-          </svg>
-        </div>
+        <div class="work-art" aria-hidden="true"></div>
         <figcaption>Rear quarter respray — booth finish</figcaption>
       </div>
     </figure>
@@ -1032,11 +1020,11 @@ footer {
       <svg width="110" height="22" viewBox="0 0 132 26" role="img" aria-label="SPARKS">
         <text x="0" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">SP</text>
         <g>
-          <text x="31" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F5F7">A</text>
-          <polygon points="34,14.6 42,14.6 39.4,17.4 36,17.4" fill="#0D0F12"/>
-          <polygon points="35,14.9 40.6,14.9 38.6,17 36.4,17" fill="#FF5A1F"/>
+          <text x="29.5" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F5F7">A</text>
+          <polygon points="32.5,14.6 40.5,14.6 37.9,17.4 34.5,17.4" fill="#0D0F12"/>
+          <polygon points="33.5,14.9 39.1,14.9 37.1,17 34.9,17" fill="#FF5A1F"/>
         </g>
-        <text x="48" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">RKS</text>
+        <text x="46.5" y="21" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" fill="#F4F5F7">RKS</text>
       </svg>
     </a>
     <ul class="footer-nav">
