@@ -7,10 +7,10 @@ Burnt Oak, Edgware HA8 5EY**. Built to the locked plan in `docs/`
 **`index.html` is the deliverable** — one self-contained file: fonts,
 noise texture, GSAP 3.12.5, ScrollTrigger and Lenis 1.0.42 are all inlined
 (from npm, zero CDN). It opens perfectly from a local double-click and
-deploys to Netlify as-is. 263KB total.
+deploys to Netlify as-is. 415KB total (253KB over the wire), full photography embedded.
 
 ## ⛔ Before the client sees it
-Remaining: photo drop-in + OG URL confirm — see **`docs/06_FINAL_REVIEW.md` → HANDOVER SWAPS**
+Remaining: confirm OG URL after deploy + tap-test links on a real phone — see **`docs/06_FINAL_REVIEW.md` → HANDOVER SWAPS**
 The real number (07917 551944) and owner-approved review copy are already wired in.
 
 ## Editing and rebuilding

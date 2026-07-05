@@ -87,6 +87,16 @@ async function embedHero(html) {
 
 html = await embedHero(html);
 
+/* ---------- optional work tiles ---------- */
+const tiles = ["work-tile-1.webp", "work-tile-2.webp"].map((f) => join(here, "assets", f));
+if (tiles.every(existsSync)) {
+  html = html
+    .replace("@@TILE1@@", `data:image/webp;base64,${b64(tiles[0])}`)
+    .replace("@@TILE2@@", `data:image/webp;base64,${b64(tiles[1])}`);
+} else {
+  html = html.replace(/\s*<div class="work-tiles">[\s\S]*?<\/div>\n/, "\n");
+}
+
 writeFileSync(out, html);
 
 const size = statSync(out).size;

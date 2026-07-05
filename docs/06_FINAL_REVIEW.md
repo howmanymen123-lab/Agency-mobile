@@ -1,6 +1,6 @@
 # 06 — FINAL REVIEW
 ## Sparks Car Body Repair
-Status: 🟡 Build complete & verified in-browser. **4 handover swaps required before the client sees it** (list below).
+Status: ✅ Build complete with real photography, number and copy. Remaining before sharing: tap-test links on a real phone; confirm OG URL after Netlify deploy.
 
 ---
 
@@ -12,14 +12,14 @@ Status: 🟡 Build complete & verified in-browser. **4 handover swaps required b
    authorised invented review copy for the tester ("make reviews up",
    05 Jul 2026). The three quotes stay as written — locked format respected
    (first name + initial, no dates, stars above, no counts).
-3. **Hero / Our Work photography — 🟡 AWAITING FILE UPLOAD.** Max sent the
-   three asset-map photos as inline chat images; inline images don't reach
-   the build filesystem (file attachments do). Once re-sent as a zip:
-   red respray shot → `build/assets/hero.jpg`, run `node build/build.mjs` —
-   photographic hero, Ken Burns and Our Work lead activate automatically.
-   Note for prep: the respray shot is a Google Maps listing screenshot —
-   crop the carousel arrows / "Google Maps" overlay from the bottom edge
-   before use.
+3. **Hero / Our Work photography — ✅ RESOLVED.** All three asset-map photos
+   received via zip (05 Jul 2026) and prepped per the asset map: respray shot
+   cropped to remove the Google Maps carousel overlay (1250×850), darkened
+   toward the booth-light concept (brightness 0.87, saturation +8%), blacks
+   crushed toward `#0D0F12`, WebP q64 → 90KB. Photographic hero, Ken Burns
+   and Our Work lead active. The two 357px shots ship as small supporting
+   tiles (≤180px rendered per plan) at WebP q70, 4:3 crop, factual captions.
+   `og.jpg` regenerated from the photographic hero.
 4. **OG URL.** Meta/OG/schema URLs assume `sparksbodyrepair.netlify.app`
    (suggested in 05_BUILD_NOTES). If the deployed subdomain differs, update
    `og:url`, `og:image` and the JSON-LD `url`/`image` in the template and rebuild.
@@ -33,19 +33,19 @@ omitted entirely. Blocker 3 (rating figure): stars-only, no numbers, per plan.
 | 1 | Offline local open | ✅ PASS | `file://` open: fully styled, embedded fonts confirmed loaded, zero external/failed requests |
 | 2 | JS disabled | ✅ PASS | H1, all sections and first review visible; no hidden content, no overlays (content-visible-by-default architecture) |
 | 3 | Reduced motion | ✅ PASS | `js-anim` never applied; GSAP/Lenis not initialised; instant states; carousel autoplay disabled |
-| 4 | Mobile viewports | ✅ PASS | 390×844 and 360×800: zero horizontal overflow; sticky bar ≥56px touch height, safe-area padded, appears after hero scroll-out |
+| 4 | Mobile viewports | ✅ PASS | 390×844 and 360×800: zero horizontal overflow; hero crop keeps sprayer + red panel in frame (focal 68%); sticky bar ≥56px, safe-area padded |
 | 5 | 4x CPU throttle | ✅ PASS | CDP-emulated 4× throttle at 390×844: load 558ms, hero entrance + full-page scroll produced zero long tasks >200ms (worst: 145ms) |
-| 6 | Lighthouse scores | ✅ PASS | Mobile: **Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100** (CLS 0, TBT 140ms). Desktop: **Performance 100** (LCP 0.5s). Targets were ≥90/95/95 |
+| 6 | Lighthouse scores | ✅ PASS | Final build with photography, served gzip as Netlify serves it: mobile **Performance 97 · Accessibility 100 · Best Practices 100 · SEO 100** (LCP 2.0s, TBT 30ms, CLS 0.001). Over a raw uncompressed dev server it reads 77 — compression is doing real work; confirm post-deploy |
 | 7 | Facts register audit | ✅ PASS | Address / 20 years / guarantee / MOT: verified. Phone: real number from client ✅. Reviews: invented copy authorised by owner ✅. Hours omitted. Rating: stars only |
 | 8 | Link tap-test | 🟡 PENDING | Real number `07917 551944` now in every `wa.me` (pre-filled message) and `tel:` link; tap-test on a real phone before sharing |
 | 9 | WhatsApp OG preview | 🟡 PENDING | `og.jpg` (1200×630, from the finished hero) committed; verify preview after Netlify deploy |
 | 10 | Placeholder grep | ✅ PASS | Template source: zero hits for the flagged words (build script sweeps on every run) |
 
 ## Deviations from the locked plan (and why)
-- **Photography → art treatment (temporary).** Photos absent from the upload
-  and the build environment's egress policy blocks image hosts, so nothing
-  could be fetched or generated-then-downloaded. Playbook rule applied:
-  omission beats fakery. Drop-in pipeline ready (swap 3).
+- **Photography:** shipped art-first while photos were missing, then the real
+  client photos (from the shop's Google listing) dropped in via the build
+  pipeline with zero template surgery. Art fallback remains in the template
+  for any future rebuild without assets.
 - **Contact map → designed location panel.** Map tile/geocoding hosts are
   policy-blocked, and shipping a map image with an unverifiable pin position
   violates the facts register. Shipped: stylised street-grid panel (clearly
@@ -57,12 +57,12 @@ omitted entirely. Blocker 3 (rating figure): stars-only, no numbers, per plan.
 
 ## Senior design review
 - Does it pass the 3-second test (what/good/how-to-price)? — **Yes.** H1 states the promise; sub answers what/where; trust strip answers "are they good"; the biggest element on screen is "WhatsApp a photo of the damage".
-- Would it look £20k on the client's phone? — Type system, spacing and restraint are doing the work; hero will land fully once the real respray photo drops in. Nothing broken at any tested width.
+- Would it look £20k on the client's phone? — **Yes.** His own workshop, his own red respray under the darkened treatment, his number one thumb-tap away. Nothing broken at any tested width.
 - Anything that reads "AI-generated"? — No stock-photo feel, no gradient-text, no emoji, no generic hero. Captions are plain and factual per plan.
 
 ## Deployment
 - Netlify URL: — (not deployed from this environment; `netlify.toml` ready, publish root = `.`)
-- File size final: **263 KB** (budget ≤ 2.0MB) — single self-contained `index.html`, zero external requests
+- File size final: **415 KB** raw / **253 KB** gzip-transferred (budget ≤ 2.0MB) — single self-contained `index.html`, zero external requests, full photography embedded
 
 ## Playbook candidates (validated learnings only → AGENCY_PLAYBOOK.md)
 - Egress-restricted build environments: keep a **photo drop-in pipeline** (template token + build script) so the build is never blocked on assets — the site ships art-first, photography lands with one command.
