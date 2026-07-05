@@ -71,7 +71,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+/* scroll-behavior stays "auto" — Lenis drives all easing in JS.
+   Native smooth-scroll fights Lenis's per-frame scrollTo() calls,
+   producing a stutter/lag rather than a single smooth motion. */
+html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;

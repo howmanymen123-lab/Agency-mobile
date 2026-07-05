@@ -51,7 +51,7 @@ Do NOT include:
 - **One reveal grammar per site** (e.g. fade-up 20px / 0.6s / power2.out), `once: true`. Repeat-triggering reveals read gimmicky and cost frames.
 - **Reduced-motion is checked before init**, not patched after: skip Lenis, replace tweens with instant states, kill Ken Burns.
 - **Animate only transform + opacity.** `will-change` applied narrowly and removed after entrance.
-- **No Lenis / inertia smooth-scroll by default. No scroll-tied parallax by default.** Client feedback on Sparks: the Lenis-smoothed scroll + GSAP ScrollTrigger parallax on the hero read as "horrendous" — laggy, disconnected from native scroll feel, worst on trackpad. Default to plain native browser scroll for one-pagers. Only add Lenis/parallax if a client explicitly asks for that feel after seeing native scroll first — never ship it as an unrequested default again. (Learned: Sparks tester, 05 Jul 2026 — do not repeat.)
+- **Never pair CSS `scroll-behavior: smooth` with Lenis.** They fight: Lenis nudges `scrollY` every rAF frame, and the browser's own native smooth-scroll tries to animate toward each new target too — two competing easing curves. Measured on Sparks: a single scroll input sat almost frozen for ~750ms then lurched to catch up, with 10 scroll-direction reversals. Removing `scroll-behavior: smooth` (Lenis alone handles all easing) fixed it: motion starts in ~4 frames and eases to target with zero reversals, confirmed on both a single flick and a sustained multi-tick glide. Leave `scroll-behavior` on its default `auto` on any page running Lenis. (Learned & fixed: Sparks tester, 05 Jul 2026 — verified with frame-by-frame scrollY tracing before/after.)
 
 ## PERFORMANCE INSIGHTS
 
