@@ -11,7 +11,7 @@ deploys to Netlify as-is. 263KB total.
 
 ## ⛔ Before the client sees it
 Remaining: photo drop-in + OG URL confirm — see **`docs/06_FINAL_REVIEW.md` → HANDOVER SWAPS**
-(phone/WhatsApp number, real review quotes, real photography, OG URL).
+The real number (07917 551944) and owner-approved review copy are already wired in.
 
 ## Editing and rebuilding
 
