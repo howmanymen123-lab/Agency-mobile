@@ -10,7 +10,7 @@ noise texture, GSAP 3.12.5, ScrollTrigger and Lenis 1.0.42 are all inlined
 deploys to Netlify as-is. 263KB total.
 
 ## ⛔ Before the client sees it
-Four swaps are required — see **`docs/06_FINAL_REVIEW.md` → HANDOVER SWAPS**
+Remaining: photo drop-in + OG URL confirm — see **`docs/06_FINAL_REVIEW.md` → HANDOVER SWAPS**
 (phone/WhatsApp number, real review quotes, real photography, OG URL).
 
 ## Editing and rebuilding
