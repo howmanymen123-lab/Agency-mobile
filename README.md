@@ -1,3 +1,16 @@
+# Agency projects — this repo
+
+| Project | Folder | Deploy zip | Status |
+|---|---|---|---|
+| Sparks Car Body Repair (Edgware) | repo root | `sparks-website.zip` | Delivered |
+| Thai Health Massage (Romford) | `thai-massage/` | `thai-massage-website.zip` | Delivered — Lighthouse 100/100/100/100 |
+
+Each project is a single self-contained `index.html` built from its
+`build/template.html` via `node build/build.mjs`. Agency-wide lessons live
+in `docs/AGENCY_PLAYBOOK.md`.
+
+---
+
 # Sparks Car Body Repair — tester site
 
 Single-page, single-file website for **Sparks Car Body Repair, 29 Park Way,

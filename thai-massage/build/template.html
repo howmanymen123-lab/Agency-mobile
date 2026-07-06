@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thai Health Massage — Traditional Thai Massage in Romford | Collier Row</title>
+<meta name="description" content="Traditional Thai massage in Collier Row, Romford. Light, medium or deep — you choose the pressure. Family-run, 4.8★ from 240+ Google reviews. Call 01708 748026 to book.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thai Health Massage — Romford">
+<meta property="og:description" content="An hour that belongs to you. Light, medium or deep — you choose the pressure. Family-run · 4.8★ from 240+ Google reviews.">
+<meta property="og:url" content="https://thaihealthmassage.netlify.app/">
+<meta property="og:image" content="https://thaihealthmassage.netlify.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232A1B33'/%3E%3Ccircle cx='32' cy='27' r='11' fill='none' stroke='%23C9A15C' stroke-width='3'/%3E%3Cpath d='M18 47h28' stroke='%23C9A15C' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<!-- No head-level JS gating: content is visible by default.
+     The .js-anim class is added by the end-of-body script only when
+     reveals will actually run (playbook motion-safety rule). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Thai Health Massage",
+  "url": "https://thaihealthmassage.netlify.app/",
+  "image": "https://thaihealthmassage.netlify.app/og.jpg",
+  "telephone": "+441708748026",
+  "email": "wongsamritniddy@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "166 Collier Row Lane, Mawneys",
+    "addressLocality": "Romford",
+    "postalCode": "RM5 3EA",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "15:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/101273928085614",
+    "https://www.instagram.com/thai_healthmassage"
+  ]
+}
+</script>
+<style>
+/* ============================================================
+   THAI HEALTH MASSAGE — "THE SLOW HOUR"
+   One page. One number. Native scroll only — no scroll libraries.
+   ============================================================ */
+
+/*@@FONTFACES@@*/
+
+:root {
+  --aubergine: #2A1B33;
+  --aubergine-deep: #211527;
+  --gold: #C9A15C;
+  --gold-deep: #B89050;
+  --ivory: #F7F2EA;
+  --ivory-raised: #FDFBF7;
+  --clay: #B4634A;
+  --gold-text: #83652C;  /* gold for TEXT on ivory — 4.9:1 (decorative gold stays #C9A15C) */
+  --clay-text: #9A4E36;  /* clay for TEXT on ivory — 5.4:1 */
+  --plum-muted: #6B5E75;
+  --line: rgba(42, 27, 51, 0.1);
+  --line-gold: rgba(201, 161, 92, 0.45);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Karla", system-ui, -apple-system, sans-serif;
+
+  --pad-section: clamp(88px, 13vh, 150px);
+  --ease-slow: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-h: 76px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  /* native anchor glide only — NO scroll libraries on this build */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--aubergine);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 560;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.7rem, 8.5vw, 5.5rem);
+  line-height: 1.04;
+  font-variation-settings: "opsz" 100;
+}
+h2 {
+  font-size: clamp(1.9rem, 4.6vw, 3.1rem);
+  line-height: 1.1;
+  font-variation-settings: "opsz" 72;
+}
+p { margin: 0; max-width: 62ch; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+::selection { background: var(--gold); color: var(--aubergine); }
+
+.micro {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clay-text);
+  margin-bottom: 18px;
+}
+.on-dark .micro { color: var(--gold); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: fixed; top: 10px; left: 10px; z-index: 300;
+  padding: 10px 18px;
+  background: var(--gold); color: var(--aubergine);
+  font-weight: 700; text-decoration: none; border-radius: 999px;
+  transform: translateY(-250%);
+  transition: transform 0.2s;
+}
+.skip-link:focus { transform: none; }
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 720px) { .wrap { padding-inline: 28px; } }
+
+section { position: relative; }
+section[id] { scroll-margin-top: calc(var(--nav-h) + 14px); }
+.section { padding-block: var(--pad-section); }
+@media (max-width: 719px) { .section { padding-block: 72px; } }
+
+.section-head { max-width: 700px; margin-bottom: clamp(36px, 6vw, 64px); }
+.lede { color: var(--plum-muted); font-size: 1.1rem; margin-top: 16px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s, transform 0.25s var(--ease-slow), box-shadow 0.25s;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--aubergine);
+  box-shadow: 0 10px 30px -12px rgba(201, 161, 92, 0.55);
+}
+.btn-gold:hover { background: var(--gold-deep); transform: translateY(-2px); }
+.btn-quiet {
+  border-color: var(--line-gold);
+  color: inherit;
+  background: transparent;
+}
+.btn-quiet:hover { border-color: var(--gold); transform: translateY(-2px); }
+.btn svg { flex-shrink: 0; }
+
+.phone-glyph { width: 18px; height: 18px; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  color: var(--ivory);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.nav.is-solid {
+  background: rgba(247, 242, 234, 0.96);
+  color: var(--aubergine);
+  border-bottom-color: var(--line-gold);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 1.22rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.wordmark::after {
+  content: "";
+  width: 26px; height: 2px;
+  background: var(--gold);
+  transform: translateY(-4px);
+}
+.nav-links {
+  display: none;
+  list-style: none;
+  margin: 0; padding: 0;
+  align-items: center;
+  gap: 4px;
+}
+.nav-links a:not(.btn) {
+  display: block;
+  padding: 10px 13px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 6px;
+  position: relative;
+}
+.nav-links a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 13px; right: 100%; bottom: 5px;
+  height: 1.5px;
+  background: var(--gold);
+  transition: right 0.3s var(--ease-slow);
+}
+.nav-links a:not(.btn):hover::after { right: 13px; }
+.nav-links .btn { min-height: 44px; padding: 10px 22px; margin-left: 12px; font-size: 0.92rem; }
+@media (min-width: 920px) { .nav-links { display: flex; } }
+
+/* mobile: single call icon-button, no hamburger */
+.nav-call-mobile {
+  display: grid;
+  place-items: center;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--aubergine);
+  text-decoration: none;
+  box-shadow: 0 8px 22px -10px rgba(201, 161, 92, 0.6);
+}
+@media (min-width: 920px) { .nav-call-mobile { display: none; } }
+
+/* ---------- HERO — The Slow Hour ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, #241730 0%, var(--aubergine) 55%, var(--aubergine-deep) 100%);
+  color: var(--ivory);
+  overflow: clip;
+}
+/* grain on the dark field */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("@@NOISE@@");
+}
+/* candlelight — the one slowly moving element */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  right: -12%;
+  top: 8%;
+  width: 68%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%,
+    rgba(201, 161, 92, 0.32) 0%,
+    rgba(180, 99, 74, 0.14) 38%,
+    transparent 68%);
+  /* no filter here — the gradient is already soft, and a blur on an
+     element this large costs real raster time on mid-range phones */
+  animation: breathe 14s var(--ease-slow) infinite;
+  transform-origin: 55% 45%;
+}
+.hero-glow::after {
+  content: "";
+  position: absolute;
+  right: 6%;
+  top: 22%;
+  width: 26%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 242, 234, 0.1), transparent 65%);
+  animation: breathe 14s var(--ease-slow) -7s infinite;
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
+  50%      { transform: scale(1.07) translateY(-1.5%); opacity: 0.85; }
+}
+/* silk thread — still, catches the light */
+.hero-silk {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: calc(var(--nav-h) + 40px);
+  padding-bottom: clamp(40px, 7vh, 84px);
+}
+.hero-copy { max-width: 640px; }
+.hero-copy .micro { color: var(--gold); margin-bottom: 22px; }
+.hero-sub {
+  margin-top: 22px;
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 44ch;
+  color: rgba(247, 242, 234, 0.88);
+}
+.hero-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+.hero-rating .stars { color: var(--gold); letter-spacing: 0.14em; font-size: 0.9rem; }
+.hero-rating:hover { color: var(--gold); }
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+}
+.open-status {
+  font-size: 0.9rem;
+  color: rgba(247, 242, 234, 0.75);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 479px) {
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .hero-ctas .btn { width: 100%; }
+}
+
+/* ---------- Trust strip ---------- */
+.trust-strip {
+  border-bottom: 1px solid var(--line-gold);
+  background: var(--ivory);
+  padding-block: 22px;
+}
+.trust-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 0;
+}
+.trust-list li {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--plum-muted);
+  padding-inline: 22px;
+  position: relative;
+  white-space: nowrap;
+}
+.trust-list li + li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 1px; height: 14px;
+  transform: translateY(-50%);
+  background: var(--line-gold);
+}
+.trust-list .gold { color: var(--gold-text); }
+@media (max-width: 719px) {
+  .trust-list { max-width: 480px; margin-inline: auto; }
+  .trust-list li { padding-inline: 14px; }
+  .trust-list li:nth-child(3)::before { display: none; }
+}
+
+/* ---------- Pressure ---------- */
+.pressure-grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 880px) {
+  .pressure-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    align-items: start;
+  }
+  /* deliberate asymmetry — the middle panel settles lower */
+  .pressure-grid .panel:nth-child(2) { margin-top: 44px; }
+}
+.panel {
+  background: var(--ivory-raised);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 34px 30px;
+  box-shadow: 0 14px 34px -24px rgba(42, 27, 51, 0.35);
+}
+.panel-tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+  border: 1px solid var(--line-gold);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+}
+.panel-tag.deep { color: var(--clay-text); border-color: rgba(180, 99, 74, 0.4); }
+.panel h3 {
+  font-size: 1.45rem;
+  font-weight: 560;
+  font-variation-settings: "opsz" 40;
+  margin-bottom: 12px;
+}
+.panel p { color: var(--plum-muted); font-size: 0.99rem; }
+.panel-treatments {
+  list-style: none;
+  margin: 18px 0 0; padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+}
+.panel-treatments li {
+  font-weight: 700;
+  font-size: 0.93rem;
+  padding-left: 20px;
+  position: relative;
+}
+.panel-treatments li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.52em;
+  width: 8px; height: 2px;
+  background: var(--gold);
+}
+.panel-from {
+  margin-top: 18px;
+  font-size: 0.88rem;
+  color: var(--plum-muted);
+  letter-spacing: 0.04em;
+}
+
+.pressure-quote {
+  margin: clamp(40px, 6vw, 60px) auto 0;
+  max-width: 640px;
+  text-align: center;
+}
+.pressure-quote blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 480;
+  font-variation-settings: "opsz" 30;
+  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  line-height: 1.4;
+}
+.pressure-quote blockquote::before { content: "“"; color: var(--gold); }
+.pressure-quote blockquote::after { content: "”"; color: var(--gold); }
+.pressure-quote figcaption {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--plum-muted);
+}
+.pressure-cta {
+  margin-top: clamp(32px, 5vw, 44px);
+  text-align: center;
+}
+.pressure-cta p { max-width: none; margin-bottom: 18px; color: var(--plum-muted); }
+
+/* ---------- Prices — the duration matrix ---------- */
+.prices { background: var(--ivory-raised); border-block: 1px solid var(--line); }
+
+.matrix { width: 100%; border-collapse: collapse; }
+.matrix caption { text-align: left; }
+.matrix th, .matrix td { text-align: left; vertical-align: top; }
+.matrix thead th {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--plum-muted);
+  padding: 0 14px 14px;
+  border-bottom: 1px solid var(--line-gold);
+}
+.matrix thead th:first-child { padding-left: 0; }
+.matrix tbody th {
+  font-weight: 400;
+  padding: 20px 14px 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.matrix tbody td {
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 20px 14px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.svc-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-variation-settings: "opsz" 40;
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+.svc-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--plum-muted);
+}
+.svc-note {
+  display: block;
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--gold-text);
+}
+.matrix .dash { color: rgba(42, 27, 51, 0.25); font-weight: 400; }
+
+/* mobile: the matrix reflows into stacked service blocks — no squeeze, no h-scroll */
+@media (max-width: 759px) {
+  .matrix, .matrix tbody, .matrix tr, .matrix th, .matrix td { display: block; padding: 0; }
+  .matrix thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .matrix tbody tr {
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 20px;
+    margin-bottom: 14px;
+  }
+  .matrix tbody th { border: 0; padding-bottom: 14px; }
+  .matrix tbody td {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 9px 0;
+    border-top: 1px solid var(--line);
+    font-size: 1.02rem;
+    white-space: normal;
+  }
+  .matrix tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--plum-muted);
+  }
+  .matrix tbody td.empty { display: none; }
+}
+
+.prices-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: clamp(30px, 5vw, 44px);
+}
+.prices-cta .note { color: var(--plum-muted); font-size: 0.95rem; font-weight: 700; }
+
+/* ---------- Studio ---------- */
+.studio-grid {
+  display: grid;
+  gap: 34px;
+}
+@media (min-width: 900px) {
+  .studio-grid {
+    grid-template-columns: 7fr 5fr;
+    gap: 56px;
+    align-items: center;
+  }
+}
+.studio-media { display: grid; gap: 16px; }
+.studio-media .row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ph-media {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--ivory-raised);
+}
+.ph-media.lead { aspect-ratio: 4 / 3; }
+.row2 .ph-media { aspect-ratio: 1; }
+.ph-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.ph-media figcaption,
+.ph-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 34px 18px 12px;
+  background: linear-gradient(0deg, rgba(42, 27, 51, 0.55), transparent);
+  color: var(--ivory);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+/* art fallbacks until the real photos are dropped in */
+.art-linen {
+  position: absolute; inset: 0;
+  background:
+    repeating-linear-gradient(90deg, rgba(42,27,51,0.022) 0 2px, transparent 2px 5px),
+    repeating-linear-gradient(0deg, rgba(42,27,51,0.022) 0 2px, transparent 2px 5px),
+    linear-gradient(160deg, #FBF7EF 0%, #F0E7D8 55%, #E9DDC9 100%);
+}
+.art-linen::after {
+  content: "";
+  position: absolute;
+  left: 8%; right: 8%; top: 54%;
+  height: 1px;
+  background: var(--line-gold);
+}
+.art-silk {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 90% 60% at 20% 15%, rgba(247,242,234,0.14), transparent 60%),
+    linear-gradient(150deg, #3A2745 0%, var(--aubergine) 45%, #4A2E35 100%);
+}
+.art-botanical {
+  position: absolute; inset: 0;
+  background: linear-gradient(170deg, #F3EDE1, #EAE0CD);
+}
+.art-botanical svg {
+  position: absolute;
+  inset: 12%;
+  width: 76%; height: 76%;
+}
+
+.studio-copy .micro { margin-bottom: 14px; }
+.studio-copy h2 { margin-bottom: 22px; }
+.first-visit {
+  margin-top: 26px;
+  border-left: 2px solid var(--gold);
+  padding-left: 22px;
+}
+.first-visit h3 {
+  font-size: 1.1rem;
+  font-variation-settings: "opsz" 30;
+  margin-bottom: 10px;
+}
+.first-visit p { color: var(--plum-muted); font-size: 1rem; }
+
+/* ---------- About ---------- */
+.about-grid {
+  display: grid;
+  gap: 34px;
+}
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: 6fr 5fr;
+    gap: 64px;
+    align-items: center;
+  }
+}
+.about-copy p + p { margin-top: 1em; }
+.about-copy .lede { margin-top: 0; margin-bottom: 18px; }
+.about-media .ph-media { aspect-ratio: 4 / 5; }
+
+/* ---------- Reviews ---------- */
+.reviews { background: var(--ivory-raised); border-block: 1px solid var(--line); }
+.reviews-layout {
+  display: grid;
+  gap: 40px;
+}
+@media (min-width: 900px) {
+  .reviews-layout {
+    grid-template-columns: 4fr 8fr;
+    gap: 60px;
+    align-items: start;
+  }
+}
+.rating-lockup .big {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: clamp(4rem, 8vw, 6rem);
+  line-height: 1;
+  display: block;
+}
+.rating-lockup .stars {
+  display: block;
+  color: var(--gold);
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  margin-top: 10px;
+}
+.rating-lockup .from {
+  display: block;
+  margin-top: 12px;
+  color: var(--plum-muted);
+  font-weight: 700;
+}
+.rating-lockup .g-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--gold-text);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--line-gold);
+  padding-bottom: 2px;
+}
+.rating-lockup .g-link:hover { border-color: var(--gold-text); }
+
+.quote-grid {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .quote-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .quote-grid .quote:nth-child(2) { margin-top: 28px; }
+  .quote-grid .quote:nth-child(4) { margin-top: -28px; }
+}
+.quote {
+  margin: 0;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px 24px;
+}
+.quote .stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.16em; display: block; margin-bottom: 12px; }
+.quote blockquote {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+.quote figcaption {
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--plum-muted);
+}
+@media (max-width: 639px) {
+  .quote.desktop-only { display: none; }
+}
+.reviews-more-mobile {
+  display: none;
+  margin-top: 20px;
+  font-weight: 700;
+}
+@media (max-width: 639px) {
+  .reviews-more-mobile { display: block; }
+  .reviews-more-mobile a { color: var(--gold-text); }
+}
+
+/* ---------- Visit ---------- */
+.visit-grid {
+  display: grid;
+  gap: 40px;
+}
+@media (min-width: 900px) {
+  .visit-grid {
+    grid-template-columns: 5fr 6fr;
+    gap: 64px;
+    align-items: start;
+  }
+}
+.visit-info address {
+  font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-variation-settings: "opsz" 40;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  margin: 22px 0;
+}
+.visit-phone {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.visit-phone:hover { color: var(--gold-text); }
+.visit-email {
+  display: block;
+  color: var(--plum-muted);
+  font-size: 0.95rem;
+  margin-bottom: 26px;
+  overflow-wrap: anywhere;
+}
+
+.hours { width: 100%; border-collapse: collapse; max-width: 380px; }
+.hours caption {
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--plum-muted);
+  padding-bottom: 12px;
+}
+.hours th, .hours td {
+  text-align: left;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 400;
+}
+.hours th { font-weight: 700; padding-right: 26px; width: 1%; white-space: nowrap; }
+.hours td { text-align: right; }
+.hours tr.today th, .hours tr.today td {
+  color: var(--gold-text);
+  font-weight: 700;
+}
+.hours tr.today th::after {
+  content: "· today";
+  margin-left: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.map-panel {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(170deg, #F1EADD, #E7DCC6);
+  min-height: 360px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.map-panel .streets {
+  position: absolute; inset: 0;
+  opacity: 0.55;
+}
+.map-panel .pin {
+  position: absolute;
+  top: 32%; left: 54%;
+  width: 44px; height: 54px;
+  filter: drop-shadow(0 6px 8px rgba(42, 27, 51, 0.3));
+}
+.map-card {
+  position: relative;
+  margin: 18px;
+  width: calc(100% - 36px);
+  background: rgba(253, 251, 247, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+}
+.map-card .place {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 1.02rem;
+}
+.map-card .place small {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--plum-muted);
+  font-size: 0.82rem;
+  margin-top: 3px;
+}
+.map-card .btn { margin-left: auto; min-height: 46px; padding: 11px 22px; font-size: 0.92rem; }
+
+.visit-cta { margin-top: 30px; }
+
+/* ---------- Final CTA band + footer ---------- */
+.final-band {
+  background: linear-gradient(180deg, var(--aubergine) 0%, var(--aubergine-deep) 100%);
+  color: var(--ivory);
+  text-align: center;
+  padding-block: clamp(90px, 14vh, 150px);
+  position: relative;
+  overflow: clip;
+}
+.final-band::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("@@NOISE@@");
+}
+.final-band .glow {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: min(70vw, 700px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 161, 92, 0.16), transparent 65%);
+  pointer-events: none;
+}
+.final-band h2 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin-bottom: 30px;
+  position: relative;
+}
+.final-band .hero-ctas { justify-content: center; margin-top: 0; position: relative; }
+
+.site-footer {
+  background: var(--aubergine-deep);
+  color: rgba(247, 242, 234, 0.85);
+  border-top: 1px solid rgba(201, 161, 92, 0.25);
+  padding-block: 44px;
+  padding-bottom: calc(44px + 84px); /* clearance for the sticky call bar */
+}
+@media (min-width: 920px) { .site-footer { padding-bottom: 44px; } }
+.footer-inner {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  justify-items: center;
+}
+.site-footer .wordmark { color: var(--ivory); }
+.footer-line { font-size: 0.92rem; max-width: none; }
+.footer-line a { text-decoration: none; font-weight: 700; }
+.footer-line a:hover { color: var(--gold); }
+.footer-socials {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  gap: 22px;
+}
+.footer-socials a {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 161, 92, 0.4);
+  padding-bottom: 2px;
+}
+.footer-socials a:hover { color: var(--gold); }
+.footer-legal { font-size: 0.8rem; color: rgba(247, 242, 234, 0.55); }
+
+/* ---------- Sticky mobile call bar ---------- */
+.call-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 110;
+  padding: 10px max(14px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-right));
+  background: rgba(33, 21, 39, 0.97);
+  border-top: 1px solid rgba(201, 161, 92, 0.35);
+  transform: translateY(105%);
+  transition: transform 0.4s var(--ease-slow);
+}
+.call-bar.is-visible { transform: none; }
+.call-bar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  min-height: 58px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--aubergine);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+.call-bar a .open-status {
+  color: rgba(42, 27, 51, 0.75);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+@media (min-width: 920px) { .call-bar { display: none; } }
+
+/* ---------- Reveals — gentle, once, gated on .js-anim ----------
+   .js-anim is only added by JS immediately before the observer is
+   wired up; if any script fails, nothing is ever hidden. */
+html.js-anim .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.9s var(--ease-slow) var(--d, 0s), transform 0.9s var(--ease-slow) var(--d, 0s);
+}
+html.js-anim .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Reduced motion: instant, still, complete ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html.js-anim .reveal { opacity: 1; transform: none; }
+  .hero-glow::before, .hero-glow::after { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">Thai Health Massage</a>
+    <ul class="nav-links">
+      <li><a href="#pressure">Pressure</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#studio">Studio</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-gold" href="tel:+441708748026">
+        <svg class="phone-glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        01708 748026
+      </a></li>
+    </ul>
+    <a class="nav-call-mobile" href="tel:+441708748026" aria-label="Call Thai Health Massage on 01708 748026">
+      <svg class="phone-glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO — The Slow Hour ============ -->
+<section class="hero" id="top" aria-label="Thai Health Massage — traditional Thai massage in Romford">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <svg class="hero-silk" viewBox="0 0 1200 800" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-50 620 C 260 560, 420 700, 700 610 C 920 540, 1080 590, 1260 520" stroke="rgba(201,161,92,0.22)" stroke-width="1.5"/>
+    <path d="M-50 660 C 280 600, 460 740, 740 650 C 950 580, 1100 630, 1260 560" stroke="rgba(201,161,92,0.12)" stroke-width="1.5"/>
+    <path d="M-50 580 C 240 530, 400 660, 680 575 C 900 508, 1070 555, 1260 485" stroke="rgba(247,242,234,0.08)" stroke-width="1"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="micro">Traditional Thai massage — Collier Row, Romford</span>
+        <h1>An hour that belongs to&nbsp;you.</h1>
+        <p class="hero-sub">Light, medium or deep — you choose the pressure, and Nid and her team adapt the treatment to you.</p>
+        <a class="hero-rating" href="#reviews">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          4.8 · 240+ Google reviews
+        </a>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="tel:+441708748026">
+            <svg class="phone-glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call 01708 748026
+          </a>
+          <span class="open-status" data-open-status>Open six days a week</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust-strip" role="presentation">
+  <div class="wrap">
+    <ul class="trust-list">
+      <li>Family-run</li>
+      <li>You choose the pressure</li>
+      <li class="gold">4.8★ · 240+ reviews</li>
+      <li>Open six days a week</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ PRESSURE ============ -->
+<section class="section" id="pressure" aria-labelledby="pressure-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="micro">Choose your pressure</span>
+      <h2 id="pressure-h">The treatment adapts to you.</h2>
+      <p class="lede">Every visit starts with one question: how much pressure? You choose — and it changes whenever you ask.</p>
+    </div>
+
+    <div class="pressure-grid">
+      <article class="panel reveal">
+        <span class="panel-tag">Light / Medium</span>
+        <h3>To unwind</h3>
+        <p>For switching off, easing everyday tension and first visits. Gentle, warming, unhurried.</p>
+        <ul class="panel-treatments">
+          <li>Thai Aromatherapy Massage</li>
+          <li>Thai Combination Massage</li>
+        </ul>
+        <p class="panel-from">from £40 · 30 min</p>
+      </article>
+
+      <article class="panel reveal" style="--d:.12s">
+        <span class="panel-tag deep">Deep</span>
+        <h3>To work the knots</h3>
+        <p>For desk backs, heavy shoulders and stubborn tension that needs proper, focused work.</p>
+        <ul class="panel-treatments">
+          <li>Thai Deep Tissue Massage</li>
+        </ul>
+        <p class="panel-from">from £40 · 30 min</p>
+      </article>
+
+      <article class="panel reveal" style="--d:.24s">
+        <span class="panel-tag">Your Choice</span>
+        <h3>Tell us on the day</h3>
+        <p>Not sure? Say so. Start light and go deeper — the pressure changes whenever you ask.</p>
+        <ul class="panel-treatments">
+          <li>Thai Back &amp; Shoulders Massage</li>
+          <li>Thai Foot Massage</li>
+          <li>Four Hands Massage</li>
+          <li>Couples Massage</li>
+        </ul>
+        <p class="panel-from">from £40 · 30 min</p>
+      </article>
+    </div>
+
+    <figure class="pressure-quote reveal">
+      <blockquote>I suffer with a serious back condition and the girls listened and knew exactly what to do — and not do.</blockquote>
+      <figcaption>Jo O. — Google review</figcaption>
+    </figure>
+
+    <div class="pressure-cta reveal">
+      <p>Not sure which? Call and ask — Nid will tell you straight.</p>
+      <a class="btn btn-quiet" href="tel:+441708748026">Call 01708 748026</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICES — the duration matrix ============ -->
+<section class="section prices" id="prices" aria-labelledby="prices-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="micro">Services &amp; prices</span>
+      <h2 id="prices-h">Your time, priced straight.</h2>
+      <p class="lede">No packages, no pressure — except the kind you ask for.</p>
+    </div>
+
+    <div class="reveal">
+    <table class="matrix">
+      <caption class="sr-only">Massage services with prices by duration</caption>
+      <thead>
+        <tr>
+          <th scope="col">Treatment</th>
+          <th scope="col">30 min</th>
+          <th scope="col">1 hr</th>
+          <th scope="col">90 min</th>
+          <th scope="col">2 hrs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><span class="svc-name">Thai Aromatherapy Massage</span><span class="svc-tag">Light / Medium</span></th>
+          <td data-label="30 min">£40</td>
+          <td data-label="1 hr">£60</td>
+          <td data-label="90 min">£85</td>
+          <td data-label="2 hrs">£110</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="svc-name">Thai Deep Tissue Massage</span><span class="svc-tag">Deep</span></th>
+          <td data-label="30 min">£40</td>
+          <td data-label="1 hr">£60</td>
+          <td data-label="90 min">£85</td>
+          <td data-label="2 hrs">£110</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="svc-name">Thai Combination Massage</span><span class="svc-tag">Light / Medium</span></th>
+          <td data-label="30 min">£40</td>
+          <td data-label="1 hr">£60</td>
+          <td data-label="90 min">£85</td>
+          <td data-label="2 hrs">£110</td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="svc-name">Thai Back &amp; Shoulders Massage</span><span class="svc-tag">Your Choice</span></th>
+          <td data-label="30 min">£40</td>
+          <td data-label="1 hr">£60</td>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="svc-name">Thai Foot Massage</span><span class="svc-tag">Your Choice</span></th>
+          <td data-label="30 min">£40</td>
+          <td data-label="1 hr">£60</td>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="svc-name">Four Hands Massage</span><span class="svc-tag">Your Choice</span><span class="svc-note">please call for availability</span></th>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+          <td data-label="1 hr">£110</td>
+          <td data-label="90 min">£160</td>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="svc-name">Couples Massage</span><span class="svc-tag">Your Choice</span><span class="svc-note">please call for availability</span></th>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+          <td data-label="1 hr">£110</td>
+          <td data-label="90 min">£160</td>
+          <td class="empty"><span class="dash" aria-hidden="true">—</span><span class="sr-only">not offered</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="prices-cta reveal">
+      <a class="btn btn-gold" href="tel:+441708748026">
+        <svg class="phone-glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call to book
+      </a>
+      <span class="note">Open six days a week.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDIO ============ -->
+<section class="section" id="studio" aria-labelledby="studio-h">
+  <div class="wrap studio-grid">
+    <div class="studio-media reveal">
+      <figure class="ph-media lead" data-photo="studio-1">
+        <div class="art-linen" aria-hidden="true"></div>
+        <figcaption>The treatment room</figcaption>
+      </figure>
+      <div class="row2">
+        <figure class="ph-media" data-photo="studio-2">
+          <div class="art-botanical" aria-hidden="true">
+            <svg viewBox="0 0 200 200" fill="none" stroke="#C9A15C" stroke-width="1.5" stroke-linecap="round">
+              <path d="M100 185 C 100 140, 96 90, 88 45"/>
+              <path d="M88 45 C 78 52, 68 66, 66 84 C 80 78, 88 64, 88 45z" opacity="0.8"/>
+              <path d="M92 78 C 104 82, 116 94, 120 110 C 104 106, 94 94, 92 78z" opacity="0.8"/>
+              <path d="M90 112 C 78 118, 68 132, 66 150 C 82 144, 90 130, 90 112z" opacity="0.8"/>
+              <path d="M94 140 C 106 144, 118 156, 122 172 C 106 168, 96 156, 94 140z" opacity="0.8"/>
+              <path d="M140 185 C 142 158, 148 130, 160 108" opacity="0.6"/>
+              <path d="M160 108 C 150 114, 142 126, 141 140 C 152 134, 158 122, 160 108z" opacity="0.5"/>
+              <path d="M46 185 C 44 162, 40 138, 30 120" opacity="0.6"/>
+              <path d="M30 120 C 40 126, 48 138, 49 152 C 38 146, 32 134, 30 120z" opacity="0.5"/>
+            </svg>
+          </div>
+          <figcaption>Grown, not staged</figcaption>
+        </figure>
+        <figure class="ph-media" data-photo="studio-3">
+          <div class="art-silk" aria-hidden="true"></div>
+          <figcaption>Thai silk &amp; linen</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="studio-copy reveal" style="--d:.12s">
+      <span class="micro">The studio</span>
+      <h2 id="studio-h">A quiet room off Collier Row Lane.</h2>
+      <p class="lede">A real, dedicated treatment space — clean, calm and kept simple, the way a massage room should be.</p>
+      <div class="first-visit">
+        <h3>Your first visit</h3>
+        <p>Arrive a few minutes early. Tell us where you're carrying tension and how much pressure you'd like — then the room is yours for the time you've booked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT — Nid & her team ============ -->
+<section class="section" id="about" aria-labelledby="about-h" style="padding-top: 0;">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="micro">Nid &amp; her team</span>
+      <h2 id="about-h">Family-run, and it feels like it.</h2>
+      <p class="lede" style="margin-top:16px;">Thai Health Massage is Nid and her small team — family, not franchise.</p>
+      <p>The techniques are traditional Thai: stretch, pressure and rhythm, applied with proper care and years of practice. A treatment here eases muscle tension, helps with everyday aches and pains and improves circulation — and sends you back into the week relaxed and refreshed.</p>
+      <p>Most of all, it's personal. The same faces, the same standard, and a treatment that's shaped around you — never the other way round.</p>
+    </div>
+    <div class="about-media reveal" style="--d:.12s">
+      <figure class="ph-media" data-photo="team">
+        <div class="art-silk" aria-hidden="true"></div>
+        <figcaption>Nid &amp; her team</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews" aria-labelledby="reviews-h">
+  <div class="wrap">
+    <h2 id="reviews-h" class="sr-only">What Romford says — Google reviews</h2>
+    <div class="reviews-layout">
+      <div class="rating-lockup reveal">
+        <span class="micro">What Romford says</span>
+        <span class="big">4.8</span>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="from">from 240+ Google reviews</span>
+        <a class="g-link" href="https://www.google.com/maps/search/?api=1&amp;query=Thai%20Health%20Massage%20166%20Collier%20Row%20Lane%20Romford" rel="noopener" target="_blank">Read all reviews on Google</a>
+      </div>
+
+      <div class="quote-grid">
+        <figure class="quote reveal">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <blockquote>I go once a month, and feel like I'm walking on air when I leave. I won't go anywhere else now.</blockquote>
+          <figcaption>Mrs B</figcaption>
+        </figure>
+        <figure class="quote reveal" style="--d:.1s">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <blockquote>Best Thai massage. Professional, polite and welcoming. The place is clean, calm and so relaxing.</blockquote>
+          <figcaption>Linda D.</figcaption>
+        </figure>
+        <figure class="quote reveal" style="--d:.2s">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <blockquote>My first massage and it was great… very adaptable to what you want.</blockquote>
+          <figcaption>C.K.</figcaption>
+        </figure>
+        <figure class="quote reveal" style="--d:.3s">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <blockquote>The masseuse knows exactly what she was doing. Definitely will be coming back.</blockquote>
+          <figcaption>Hana S.</figcaption>
+        </figure>
+        <figure class="quote desktop-only reveal" style="--d:.4s">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <blockquote>…the masseuse was amazing, 10/10.</blockquote>
+          <figcaption>Marco P. — deep tissue</figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="reviews-more-mobile"><a href="https://www.google.com/maps/search/?api=1&amp;query=Thai%20Health%20Massage%20166%20Collier%20Row%20Lane%20Romford" rel="noopener" target="_blank">Read all reviews on Google →</a></p>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="section" id="visit" aria-labelledby="visit-h">
+  <div class="wrap visit-grid">
+    <div class="visit-info reveal">
+      <span class="micro">Visit us</span>
+      <h2 id="visit-h">Find us on Collier Row Lane.</h2>
+      <address>166 Collier Row Lane, Mawneys,<br>Romford RM5 3EA</address>
+      <a class="visit-phone" href="tel:+441708748026">01708 748026</a>
+      <span class="visit-email">wongsamritniddy@gmail.com</span>
+
+      <table class="hours">
+        <caption>Opening hours</caption>
+        <tbody>
+          <tr data-dow="1"><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr data-dow="2"><th scope="row">Tuesday</th><td>9:00am – 7:00pm</td></tr>
+          <tr data-dow="3"><th scope="row">Wednesday</th><td>9:00am – 7:00pm</td></tr>
+          <tr data-dow="4"><th scope="row">Thursday</th><td>9:00am – 7:00pm</td></tr>
+          <tr data-dow="5"><th scope="row">Friday</th><td>9:00am – 7:00pm</td></tr>
+          <tr data-dow="6"><th scope="row">Saturday</th><td>9:00am – 7:00pm</td></tr>
+          <tr data-dow="0"><th scope="row">Sunday</th><td>10:00am – 3:00pm</td></tr>
+        </tbody>
+      </table>
+
+      <div class="visit-cta">
+        <a class="btn btn-gold" href="tel:+441708748026">
+          <svg class="phone-glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call to book
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal" style="--d:.12s">
+      <div class="map-panel">
+        <!-- stylised location panel (decorative street grid, not a map
+             projection) — links out to live Google Maps directions -->
+        <svg class="streets" viewBox="0 0 600 420" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <g stroke="#D8CBAF" stroke-width="2">
+            <path d="M-20 80 L 620 55"/><path d="M-20 190 L 620 175"/>
+            <path d="M-20 305 L 620 295"/><path d="M90 -20 L 130 440"/>
+            <path d="M260 -20 L 280 440"/><path d="M440 -20 L 430 440"/>
+          </g>
+          <g stroke="#E0D5BD" stroke-width="1.5">
+            <path d="M-20 135 L 620 115"/><path d="M-20 250 L 620 240"/>
+            <path d="M175 -20 L 205 440"/><path d="M350 -20 L 355 440"/>
+            <path d="M530 -20 L 520 440"/>
+          </g>
+          <path d="M-20 355 C 150 338, 450 350, 620 335" stroke="#C9A15C" stroke-width="2.5" opacity="0.5"/>
+        </svg>
+        <svg class="pin" viewBox="0 0 44 54" fill="none" aria-hidden="true">
+          <path d="M22 2 C 11 2, 3 10, 3 21 C 3 34, 22 52, 22 52 C 22 52, 41 34, 41 21 C 41 10, 33 2, 22 2 Z" fill="#B4634A"/>
+          <circle cx="22" cy="21" r="7" fill="#F7F2EA"/>
+        </svg>
+        <div class="map-card">
+          <span class="place">Thai Health Massage
+            <small>166 Collier Row Lane · Romford RM5 3EA</small>
+          </span>
+          <a class="btn btn-quiet" href="https://www.google.com/maps/dir/?api=1&amp;destination=166%20Collier%20Row%20Lane%2C%20Mawneys%2C%20Romford%20RM5%203EA" rel="noopener" target="_blank">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FINAL CTA BAND ============ -->
+<aside class="final-band on-dark" aria-label="Book your visit">
+  <span class="glow" aria-hidden="true"></span>
+  <div class="wrap">
+    <h2>Your hour is waiting.</h2>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="tel:+441708748026">
+        <svg class="phone-glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 01708 748026
+      </a>
+      <span class="open-status" data-open-status>Open six days a week</span>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="wordmark" href="#top">Thai Health Massage</a>
+    <p class="footer-line">166 Collier Row Lane, Mawneys, Romford RM5 3EA · <a href="tel:+441708748026">01708 748026</a></p>
+    <p class="footer-line">Closed Mondays · Tue–Sat 9am–7pm · Sun 10am–3pm</p>
+    <ul class="footer-socials">
+      <li><a href="https://www.facebook.com/101273928085614" rel="noopener" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/thai_healthmassage" rel="noopener" target="_blank">Instagram</a></li>
+    </ul>
+    <p class="footer-legal">© <span data-year>2026</span> Thai Health Massage</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CALL BAR ============ -->
+<div class="call-bar" data-call-bar aria-hidden="true">
+  <a href="tel:+441708748026" tabindex="-1">
+    Call 01708 748026
+    <span class="open-status" data-open-status>Open six days a week</span>
+  </a>
+</div>
+
+<script>
+/* ============================================================
+   Native scroll only. No scroll libraries, no smooth-scroll JS.
+   Everything below is progressive enhancement — the page is
+   complete and readable with JS disabled.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  /* ---------- footer year ---------- */
+  var yearEl = document.querySelector("[data-year]");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---------- nav solid state after hero ---------- */
+  var nav = document.getElementById("nav");
+  var hero = document.querySelector(".hero");
+  function navState() {
+    var threshold = hero ? hero.offsetHeight - 76 : 400;
+    if (window.scrollY > threshold) nav.classList.add("is-solid");
+    else nav.classList.remove("is-solid");
+  }
+  navState();
+  window.addEventListener("scroll", navState, { passive: true });
+  window.addEventListener("resize", navState, { passive: true });
+
+  /* ---------- sticky mobile call bar after hero ---------- */
+  var bar = document.querySelector("[data-call-bar]");
+  if (bar && hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      var out = !entries[0].isIntersecting;
+      bar.classList.toggle("is-visible", out);
+      bar.setAttribute("aria-hidden", String(!out));
+      var link = bar.querySelector("a");
+      if (out) link.removeAttribute("tabindex");
+      else link.setAttribute("tabindex", "-1");
+    }, { threshold: 0 }).observe(hero);
+  }
+
+  /* ---------- open-status lines (Europe/London, static-safe) ---------- */
+  try {
+    var now = new Date();
+    var parts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Europe/London",
+      weekday: "short", hour: "numeric", minute: "numeric", hour12: false
+    }).formatToParts(now);
+    var get = function (type) {
+      for (var i = 0; i < parts.length; i++) if (parts[i].type === type) return parts[i].value;
+      return "";
+    };
+    var dowNames = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    var dow = dowNames[get("weekday")];
+    var mins = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+
+    // hours: [openMins, closeMins] or null = closed
+    var hoursMap = [
+      [600, 900],   // Sun 10:00–15:00
+      null,         // Mon closed
+      [540, 1140],  // Tue 09:00–19:00
+      [540, 1140],  // Wed
+      [540, 1140],  // Thu
+      [540, 1140],  // Fri
+      [540, 1140]   // Sat
+    ];
+    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var fmt = function (m) {
+      var h = Math.floor(m / 60), mm = m % 60;
+      var ap = h >= 12 ? "pm" : "am";
+      var h12 = h % 12 === 0 ? 12 : h % 12;
+      return h12 + (mm ? ":" + (mm < 10 ? "0" : "") + mm : "") + ap;
+    };
+
+    var status = "";
+    var today = hoursMap[dow];
+    if (today && mins >= today[0] && mins < today[1]) {
+      status = "Open today until " + fmt(today[1]);
+    } else if (today && mins < today[0]) {
+      status = "Opens today at " + fmt(today[0]);
+    } else {
+      // find next open day
+      for (var add = 1; add <= 7; add++) {
+        var d = (dow + add) % 7;
+        if (hoursMap[d]) {
+          status = "Opens " + (add === 1 ? "tomorrow" : dayNames[d]) + " at " + fmt(hoursMap[d][0]);
+          break;
+        }
+      }
+    }
+    if (status) {
+      var nodes = document.querySelectorAll("[data-open-status]");
+      for (var n = 0; n < nodes.length; n++) nodes[n].textContent = status;
+    }
+
+    /* highlight today's row in the hours table */
+    var row = document.querySelector('.hours tr[data-dow="' + dow + '"]');
+    if (row) row.classList.add("today");
+  } catch (e) { /* static fallback text stays */ }
+
+  /* ---------- gentle reveals (JS-gated; visible without JS) ---------- */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    try {
+      var revealEls = document.querySelectorAll(".reveal");
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+      // hide-then-reveal is switched on only now that the observer exists
+      document.documentElement.classList.add("js-anim");
+      for (var v = 0; v < revealEls.length; v++) io.observe(revealEls[v]);
+    } catch (e) {
+      document.documentElement.classList.remove("js-anim");
+    }
+  }
+  /* reduced motion or no IO: .js-anim never added — everything stays visible */
+})();
+</script>
+</body>
+</html>
